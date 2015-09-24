@@ -208,4 +208,8 @@ ListIterator List_previous(ListIterator iterator) {
     return it;
 }
 
+Item List_item(ListIterator iterator) {
+    return iterator->item;
+}
+
 ///// End Iterator Functions /////

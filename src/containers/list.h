@@ -28,5 +28,6 @@ ListIterator List_reverseBegin(const List* list);
 ListIterator List_reverseEnd(const List* list);
 ListIterator List_next(ListIterator iterator);
 ListIterator List_previous(ListIterator iterator);
+Item List_item(ListIterator iterator);
 
 #endif //LIST_H
