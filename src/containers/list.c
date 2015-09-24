@@ -103,14 +103,15 @@ Item List_removeFront(List* list) {
         if(list->front == list->back) {
             // removing last element in the list -> last pointer must point to NULL
             list->back = NULL;
+        } else {
+            // the new front element has no previous element
+            list->front->next->previous = NULL;
         }
 
         // store the front element in aux
         Element* aux = list->front;
         // move the front pointer to the next element in the list
         list->front = list->front->next;
-        // the new front element has no previous element
-        list->front->previous = NULL;
 
         // return the item being removed
         itemRemoved = aux->item;
@@ -133,14 +134,15 @@ Item List_removeBack(List* list) {
         if(list->front == list->back) {
             // removing last element in the list -> front pointer must point to NULL
             list->front = NULL;
+        } else {
+            // new back element has no next element
+            list->back->previous->next = NULL;
         }
 
         // store the back element in aux
         Element* aux = list->back;
         // move the back pointer to the previous element in the list
         list->back = list->back->previous;
-        // new back element has no next element
-        list->back->next = NULL;
 
         // return the item being removed
         itemRemoved = aux->item;
