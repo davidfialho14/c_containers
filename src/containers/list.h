@@ -12,8 +12,8 @@ void List_delete(List* list, void (*delete)(void*));
 
 void List_insertFront(List* list, Item item);
 void List_insertBack(List* list, Item item);
-void List_removeFront(List* list);
-void List_removeBack(List* list);
+Item List_removeFront(List* list);
+Item List_removeBack(List* list);
 
 Item List_front(List* list);
 Item List_back(List* list);
