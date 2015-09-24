@@ -7,6 +7,10 @@ typedef struct Element {
     struct Element* previous;
 } Element;
 
+struct Iterator {
+    Element* element;
+};
+
 struct List {
     Element* front;
     Element* back;
@@ -165,3 +169,43 @@ size_t List_size(const List* list) {
 bool List_isEmpty(const List* list) {
     return list->front == NULL;
 }
+
+///// Begin Iterator Functions /////
+
+ListIterator List_begin(const List* list){
+    ListIterator it;
+    it = list->front;
+    return it;
+}
+
+ListIterator List_end(const List* list) {
+    ListIterator it;
+    it = NULL;
+    return it;
+}
+
+ListIterator List_reverseBegin(const List* list) {
+    ListIterator it;
+    it = list->back;
+    return it;
+}
+
+ListIterator List_reverseEnd(const List* list) {
+    ListIterator it;
+    it = NULL;
+    return it;
+}
+
+ListIterator List_next(ListIterator iterator) {
+    ListIterator it;
+    it = iterator->next;
+    return it;
+}
+
+ListIterator List_previous(ListIterator iterator) {
+    ListIterator it;
+    it = iterator->previous;
+    return it;
+}
+
+///// End Iterator Functions /////
