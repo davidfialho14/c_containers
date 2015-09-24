@@ -13,11 +13,11 @@ void Queue_add(Queue* queue, Item item) {
     List_insertFront(queue, item);
 }
 
-Item Queue_get(Queue* queue, Item item) {
+Item Queue_get(Queue* queue) {
     return List_removeBack(queue);
 }
 
-Item Queue_peek(Queue* queue, Item item) {
+Item Queue_peek(Queue* queue) {
     return List_back(queue);
 }
 
