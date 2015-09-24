@@ -149,3 +149,19 @@ Item List_removeBack(List* list) {
 
     return itemRemoved;
 }
+
+Item List_front(List* list) {
+    return list->front->item;
+}
+
+Item List_back(List* list) {
+    return list->back->item;
+}
+
+size_t List_size(List* list) {
+    return list->size;
+}
+
+bool List_isEmpty(List* list) {
+    return list->front == NULL;
+}
