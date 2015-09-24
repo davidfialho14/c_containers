@@ -15,9 +15,9 @@ void List_insertBack(List* list, Item item);
 Item List_removeFront(List* list);
 Item List_removeBack(List* list);
 
-Item List_front(List* list);
-Item List_back(List* list);
-size_t List_size(List* list);
-bool List_isEmpty(List* list);
+Item List_front(const List* list);
+Item List_back(const List* list);
+size_t List_size(const List* list);
+bool List_isEmpty(const List* list);
 
 #endif //LIST_H

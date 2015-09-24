@@ -150,18 +150,18 @@ Item List_removeBack(List* list) {
     return itemRemoved;
 }
 
-Item List_front(List* list) {
+Item List_front(const List* list) {
     return list->front->item;
 }
 
-Item List_back(List* list) {
+Item List_back(const List* list) {
     return list->back->item;
 }
 
-size_t List_size(List* list) {
+size_t List_size(const List* list) {
     return list->size;
 }
 
-bool List_isEmpty(List* list) {
+bool List_isEmpty(const List* list) {
     return list->front == NULL;
 }
