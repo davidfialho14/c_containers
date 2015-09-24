@@ -1,5 +1,5 @@
+#include <malloc.h>
 #include "queue.h"
-#include "list.c"
 
 Queue* Queue_new() {
     return List_new();
