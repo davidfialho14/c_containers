@@ -44,3 +44,43 @@ void List_delete(List* list, void (*delete)(void*)) {
         aux = list->front;
     }
 }
+
+void List_insertFront(List* list, Item item) {
+    // create an list element to hold the item
+    Element* element = malloc(sizeof(Element));
+    element->item = item;
+    element->next = NULL;
+
+    if(list->front == NULL) {
+        // list is empty -> inserting first item
+        list->back = element;
+    } else {
+        // list is not empty -> link the element to the front element of the list
+        element->next = list->front;
+    }
+
+    // insert element in the front
+    list->front = element;
+    // increase list size by 1
+    list->size++;
+}
+
+void List_insertBack(List* list, Item item) {
+    // create an list element to hold the item
+    Element* element = malloc(sizeof(Element));
+    element->item = item;
+    element->next = NULL;
+
+    if(list->back == NULL) {
+        // list is empty -> inserting first element
+        list->front = element;
+    } else {
+        // list is not empty -> link back element to the new element
+        list->back->next = element;
+    }
+
+    // insert element in the back
+    list->back = element;
+    // increase list size by 1
+    list->size++;
+}
