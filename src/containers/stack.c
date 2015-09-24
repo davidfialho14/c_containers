@@ -13,11 +13,11 @@ void Stack_add(Stack* stack, Item item) {
     List_insertFront(stack, item);
 }
 
-Item Stack_get(Stack* stack, Item item) {
+Item Stack_get(Stack* stack) {
     return List_removeFront(stack);
 }
 
-Item Stack_peek(Stack* stack, Item item) {
+Item Stack_peek(Stack* stack) {
     return List_front(stack);
 }
 
