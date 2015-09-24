@@ -12,6 +12,11 @@ int main() {
         List_insertBack(list, number);
     }
 
+    for(ListIterator it = List_begin(list); it != List_end(list); it = List_next(it)) {
+        int* number = List_item(it);
+        printf("%d\n", *number);
+    }
+
     List_delete(list, NULL);
 
     return 0;
