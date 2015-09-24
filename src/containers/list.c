@@ -173,39 +173,27 @@ bool List_isEmpty(const List* list) {
 ///// Begin Iterator Functions /////
 
 ListIterator List_begin(const List* list){
-    ListIterator it;
-    it = list->front;
-    return it;
+    return list->front;
 }
 
 ListIterator List_end(const List* list) {
-    ListIterator it;
-    it = NULL;
-    return it;
+    return NULL;
 }
 
 ListIterator List_reverseBegin(const List* list) {
-    ListIterator it;
-    it = list->back;
-    return it;
+    return list->back;
 }
 
 ListIterator List_reverseEnd(const List* list) {
-    ListIterator it;
-    it = NULL;
-    return it;
+    return NULL;
 }
 
 ListIterator List_next(ListIterator iterator) {
-    ListIterator it;
-    it = iterator->next;
-    return it;
+    return iterator->next;
 }
 
 ListIterator List_previous(ListIterator iterator) {
-    ListIterator it;
-    it = iterator->previous;
-    return it;
+    return iterator->previous;
 }
 
 Item List_item(ListIterator iterator) {

@@ -3,10 +3,9 @@
 
 #include <stddef.h>
 #include <stdbool.h>
-#include "list.c"
 
 typedef struct List List;
-typedef Element* ListIterator;
+typedef struct Element* ListIterator;
 typedef void* Item;
 
 List* List_new();
